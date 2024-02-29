@@ -1,10 +1,22 @@
 ﻿#include "CommandLine.h"
 #include <nlohmann/json.hpp>
 
+#include <filesystem>
+
 using namespace std;
 
 int main()
 {
+
+	std::filesystem::path filePath = "./resources/minecraftscene.json";
+
+	
+
+
+
+
+
+#ifdef EXAMPLE1
 	const char* jsonFragment = R"([{"type":"dirt","loc":[2, 3, 4]},{"type":"dirt","loc":[2,3,5]}])";
 
 
@@ -41,6 +53,7 @@ int main()
 		std::cerr << "Error parsing JSON: " << e.what() << '\n';
 		return -1;
 	}
+#endif
 
 
 	return 0;
