@@ -1,0 +1,15 @@
+# ninja log v5
+1	79	7303885540374231	Game/CMakeFiles/GameExe.dir/main.cpp.obj.ddi	ee2364274f3a7231
+96	119	7303886323092487	MathLib/CMakeFiles/MathLib.dir/CXX.dd	eba84b2f6f28fe04
+12	96	7303886322842326	MathLib/CMakeFiles/MathLib.dir/Vector2f.cpp.obj.ddi	9f5763c0c085f05c
+80	102	7303885540605237	Game/CMakeFiles/GameExe.dir/CXX.dd	11a0fea78339fc82
+80	102	7303885540605237	C:/Git/DAE_ToolDevelopment/Example03/out/build/x64-Debug/Game/CMakeFiles/GameExe.dir/CXXModules.json	11a0fea78339fc82
+96	119	7303886323092487	MathLib/CMakeFiles/MathLib.dir/Vector2f.cpp.obj.modmap	eba84b2f6f28fe04
+80	102	7303885540605237	Game/CMakeFiles/GameExe.dir/main.cpp.obj.modmap	11a0fea78339fc82
+96	119	7303886323092487	C:/Git/DAE_ToolDevelopment/Example03/out/build/x64-Debug/MathLib/CMakeFiles/MathLib.dir/CXXModules.json	eba84b2f6f28fe04
+103	502	7303885544603059	Game/CMakeFiles/GameExe.dir/main.cpp.obj	99320a6078afb248
+120	622	7303886328096997	MathLib/CMakeFiles/MathLib.dir/Vector2f.cpp.obj	1625c089a68d6e44
+622	748	7303886329043757	MathLib/MathLib.dll	2fc4435b0647a3a2
+622	748	7303886329043757	MathLib/MathLib.lib	2fc4435b0647a3a2
+11	145	7303886705972954	build.ninja	3a9311097899b9c6
+748	940	7303886330276885	Game/GameExe.exe	b7b9b24ecd104bee
