@@ -1,8 +1,8 @@
 ﻿# Add source to this project's executable.
 add_executable (CommandLine "CommandLine.cpp" "CommandLine.h")
 
-# Link the nlohmann_json and glm libraries
-target_link_libraries(CommandLine PRIVATE nlohmann_json::nlohmann_json glm)
+# Link the nlohmann_json
+target_link_libraries(CommandLine PRIVATE nlohmann_json::nlohmann_json glm::glm)
 
 # Set C++ standard to C++20
 set_property(TARGET CommandLine PROPERTY CXX_STANDARD 20)
@@ -15,4 +15,4 @@ add_custom_command(TARGET copy_resources POST_BUILD
     $<TARGET_FILE_DIR:CommandLine>/resources)
 
 # Include directories for glm
-target_include_directories(CommandLine PRIVATE ${glm_SOURCE_DIR})
+# target_include_directories(CommandLine PRIVATE ${glm_SOURCE_DIR})

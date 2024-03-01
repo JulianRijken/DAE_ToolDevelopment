@@ -13,15 +13,10 @@ FetchContent_Declare(
 
 # add glm
 FetchContent_Declare(
-  glm
-  URL https://github.com/g-truc/glm/releases/download/0.9.9.8/glm-0.9.9.8.zip
-  DOWNLOAD_NO_PROGRESS ON
-  DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
+	glm
+	GIT_REPOSITORY	https://github.com/g-truc/glm.git
+	GIT_TAG 	bf71a834948186f4097caa076cd2663c69a10e1e #refs/tags/0.9.9.8
 )
-FetchContent_GetProperties(glm)
-if(NOT glm_POPULATED)
-  FetchContent_Populate(glm)
-endif()
 
 
 # Make fetch content available

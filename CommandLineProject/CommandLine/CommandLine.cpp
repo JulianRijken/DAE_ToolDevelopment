@@ -1,19 +1,20 @@
 ﻿#include "CommandLine.h"
 #include <nlohmann/json.hpp>
-//#include <glm/vec3.hpp>
+#include <glm/vec3.hpp>
 
 #include <filesystem>
 #include <fstream>
+#include <unordered_set>
 
 
 using namespace std;
 
-//struct Block
-//{
-//	std::string layer;
-//	bool opaque;
-//	std::vector<glm::vec3> positions;
-//};
+struct Block
+{
+	std::string layer;
+	bool opaque;
+	std::vector<glm::vec3> positions;
+};
 
 int main()
 {
@@ -29,34 +30,45 @@ int main()
 		throw std::runtime_error("File already open" + filePath.string());
 
 	std::cout << "File Opened: " << filePath << '\n' << '\n';
-	std::cout << "Json Input: " << inFile.get() << '\n' << '\n';
+
+
+	nlohmann::json jsonDoc;
 
 	try
 	{
-		nlohmann::json doc;
-		inFile >> doc;
+		inFile >> jsonDoc;
 
 		std::cout << "Parsing successful" << '\n';
 
-		//std::unordered_set<Block> blocks{};
-
-		for (const auto& obj : doc)
-		{
-			// Extract the "type" and "loc" values
-			std::string type = obj["type"];
-			std::vector<int> loc = obj["loc"].get<std::vector<int>>();
+		std::unordered_set<Block> blocks{};
 
 
-			// Print the extracted values
-			std::cout << "Type: " << type << ", Location: " << "[";
-			for (size_t i = 0; i < loc.size(); ++i)
-			{
-				std::cout << loc[i];
-				if (i < loc.size() - 1)
-					std::cout << ", ";
-			}
-			std::cout << "]" << '\n';
-		}
+		//Block newBlock;
+		//for (const auto& obj : jsonDoc)
+		//{
+		//	newBlock.layer = obj["layer"];
+
+		//	opaque
+		//}
+
+
+		//for (const auto& obj : jsonDoc)
+		//{
+		//	// Extract the "type" and "loc" values
+		//	std::string type = bo;
+		//	std::vector<int> loc = obj["loc"].get<std::vector<int>>();
+
+
+		//	// Print the extracted values
+		//	std::cout << "Type: " << type << ", Location: " << "[";
+		//	for (size_t i = 0; i < loc.size(); ++i)
+		//	{
+		//		std::cout << loc[i];
+		//		if (i < loc.size() - 1)
+		//			std::cout << ", ";
+		//	}
+		//	std::cout << "]" << '\n';
+		//}
 	}
 	catch (nlohmann::json::parse_error& e)
 	{
