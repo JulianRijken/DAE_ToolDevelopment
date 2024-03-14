@@ -17,7 +17,12 @@ public:
     ObjFileLoader(QWidget *parent = nullptr);
     ~ObjFileLoader();
 
+private slots:
+    void on_Open_triggered(void);
+
+
 private:
     Ui::ObjFileLoader *ui;
+
 };
 #endif // OBJFILELOADER_H

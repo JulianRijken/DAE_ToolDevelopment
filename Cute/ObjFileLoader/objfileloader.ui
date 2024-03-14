@@ -13,7 +13,55 @@
   <property name="windowTitle">
    <string>ObjFileLoader</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>691</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <attribute name="horizontalHeaderCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>170</number>
+    </attribute>
+    <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>Vertex Index</string>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Position</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Texture Cords</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Normals</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -23,16 +71,16 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuKanker">
+   <widget class="QMenu" name="File">
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionZooi"/>
+    <addaction name="Open"/>
    </widget>
-   <addaction name="menuKanker"/>
+   <addaction name="File"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionZooi">
+  <action name="Open">
    <property name="text">
     <string>Open</string>
    </property>

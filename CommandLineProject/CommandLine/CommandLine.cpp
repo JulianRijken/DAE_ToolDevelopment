@@ -1,4 +1,5 @@
 ﻿#include "CommandLine.h"
+#include <iostream>
 #include <nlohmann/json.hpp>
 #include <glm/vec3.hpp>
 #include <glm/vec4.hpp>
@@ -11,9 +12,9 @@
 
 struct Block
 {
-	bool opaque;
-	std::string layer;
-	std::vector<glm::vec3> positions;
+    bool opaque;
+    std::string layer;
+    std::vector<glm::vec3> positions;
 };
 
 const std::vector<glm::vec3> CUBE_BASE_VERTICES
@@ -30,12 +31,12 @@ const std::vector<glm::vec3> CUBE_BASE_VERTICES
 
 const std::vector<glm::ivec4> CUBE_BASE_FACES
 {
-	{1, 5, 7, 3},
-	{4, 3, 7, 8},
-	{8, 7, 5, 6},
-	{6, 2, 4, 8},
-	{2, 1, 3, 4},
-	{6, 5, 1, 2}
+    {1, 5, 7, 3},
+    {4, 3, 7, 8},
+    {8, 7, 5, 6},
+    {6, 2, 4, 8},
+    {2, 1, 3, 4},
+    {6, 5, 1, 2}
 };
 
 
