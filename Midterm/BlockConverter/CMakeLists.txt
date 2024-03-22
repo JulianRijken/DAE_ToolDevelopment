@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.16)
 project(calculator LANGUAGES CXX)
 
 #TODO: include targets
-add_subdirectory(CalculatorLib)
+add_subdirectory(BlockConverterLib)
 
-add_subdirectory(CalculatorCmd)
-add_subdirectory(CalculatorForm)
+add_subdirectory(BlockConverterCmd)
+add_subdirectory(BlockConverterForm)
 
 
 #TODO2: set install definitions

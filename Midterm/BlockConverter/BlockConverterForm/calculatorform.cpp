@@ -21,7 +21,7 @@ void CalculatorForm::onValueChanged()
 {
     m_first = m_ui.inputSpinBox1->value();
     m_second = m_ui.inputSpinBox2->value();
-    CalcOperator op = (CalcOperator)m_ui.operatorSelector->currentIndex();
+    Calculator::CalcOperator op = (Calculator::CalcOperator)m_ui.operatorSelector->currentIndex();
     m_result = CalculateResult(op);
 
 
@@ -30,26 +30,22 @@ void CalculatorForm::onValueChanged()
     m_ui.outputWidget->setText(QString::number(m_result));
 }
 
-QString CalculatorForm::CalcOperatorToQString(CalcOperator op) const 
+QString CalculatorForm::CalcOperatorToQString(Calculator::CalcOperator op) const
 {
     switch (op) 
     {
         default:
-        case CalcOperator::Add: return QString("+");
-        case CalcOperator::Subtract: return QString("-");
-        case CalcOperator::Multiply: return QString("*");
-        case CalcOperator::Divide: return QString("/");
-        case CalcOperator::Modulo: return QString("%");
+        case Calculator::CalcOperator::Add: return QString("+");
+        case Calculator::CalcOperator::Subtract: return QString("-");
+        case Calculator::CalcOperator::Multiply: return QString("*");
+        case Calculator::CalcOperator::Divide: return QString("/");
+        case Calculator::CalcOperator::Modulo: return QString("%");
     }
 }
 
-int CalculatorForm::CalculateResult(CalcOperator op) 
+int CalculatorForm::CalculateResult(Calculator::CalcOperator op)
 {
-    //TODO: call Calculator functions based on operation value
-    switch (op) {
-    default:
-    case CalcOperator::Add:
-        return m_first + m_second;
-    }
+    Calculator calc{};
+    return calc.Calculate(m_first,m_second,op);
 }
 

@@ -5,14 +5,7 @@
 #define CALCULATORFORM_H
 
 #include "ui_calculatorform.h"
-
-enum class CalcOperator {
-    Add = 0,
-    Subtract = 1,
-    Multiply = 2,
-    Divide = 3,
-    Modulo = 4
-};
+#include "calculator.h"
 
 class CalculatorForm : public QWidget
 {
@@ -30,8 +23,8 @@ private:
     int m_second{};
     int m_result{};
     Ui::CalculatorForm m_ui;
-    int CalculateResult(CalcOperator operation);
-    QString CalcOperatorToQString(CalcOperator op) const;
+    int CalculateResult(Calculator::CalcOperator operation);
+    QString CalcOperatorToQString(Calculator::CalcOperator op) const;
 
 
 };
